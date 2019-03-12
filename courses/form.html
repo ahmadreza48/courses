@@ -16,16 +16,44 @@
 </body>
 
 <script>
-    function myFunction()
+    /*function myFunction()
     {
         var a, b, c;
         a = 20;
         b = 20;
         c = a * b;
         alert(c);
+    }*/
+
+    var x = function (a, b)
+    {
+        return a + b;
+    }
+    var c = x(4, 6);
+    console.log(c);
+
+    //myFunction();
+
+    (function ()
+    {
+        //alert('loaded...')
+    })();
+
+    (function ()
+    {
+    })();
+
+    function sum(a, b)
+    {
+        return a + b;
     }
 
-    myFunction();
+    var c1 = sum(4, 5) + 3;
+    console.log(c1);
+
+    var sum2 = (a, b) => a + b;
+    alert(sum2(7,8));
+
 </script>
 </html>
 
