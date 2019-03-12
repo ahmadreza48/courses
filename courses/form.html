@@ -12,47 +12,43 @@
 </h1>
 <p id="demo"></p>
 
-
 </body>
 
 <script>
-    /*function myFunction()
+    function sum(x, y)
     {
-        var a, b, c;
-        a = 20;
-        b = 20;
-        c = a * b;
-        alert(c);
-    }*/
-
-    var x = function (a, b)
-    {
-        return a + b;
-    }
-    var c = x(4, 6);
-    console.log(c);
-
-    //myFunction();
-
-    (function ()
-    {
-        //alert('loaded...')
-    })();
-
-    (function ()
-    {
-    })();
-
-    function sum(a, b)
-    {
-        return a + b;
+        return x + y;
     }
 
-    var c1 = sum(4, 5) + 3;
-    console.log(c1);
+    function sum2(x = 1, y = 3)
+    {
+        return x + y;
+    }
 
-    var sum2 = (a, b) => a + b;
-    alert(sum2(7,8));
+    function MyFunction()
+    {
+        for (var i = 0; i < arguments.length; i++)
+        {
+            //console.log(arguments[i]);
+        }
+    }
+
+    MyFunction(4, "iman", true, 456);
+
+    function add()
+    {
+        var counter = 0;
+
+        function plus()
+        {
+            counter += 1;
+        }
+
+        plus();
+        return counter;
+    }
+
+    console.log(add());
 
 </script>
 </html>
