@@ -10,45 +10,47 @@
 <h1>
     <a href="https://toplearn.com">toplearn</a>
 </h1>
+<!--<p>Ahmadreza</p>
+<p class="ahmadreza">Saeidi</p>
+<p>Toplearn</p>-->
+
+<form action="" id="form1">
+    First Name: <input type="text" name="fname">
+    <br>
+    Last Name: <input type="text" name="Iname">
+    <br>
+    <input type="submit" value="submit">
+</form>
+
+
+<button type="button" onclick="MyFunction()">Try</button>
 <p id="demo"></p>
 
 </body>
 
 <script>
-    function sum(x, y)
-    {
-        return x + y;
-    }
-
-    function sum2(x = 1, y = 3)
-    {
-        return x + y;
-    }
-
     function MyFunction()
     {
-        for (var i = 0; i < arguments.length; i++)
+        var x = document.forms["form1"];
+        var text = "";
+        for (var i = 0; i < x.length; i++)
         {
-            //console.log(arguments[i]);
+            text += x.elements[i].value + " <br/>";
         }
+        document.getElementById('demo').innerHTML = text;
+
     }
 
-    MyFunction(4, "iman", true, 456);
-
-    function add()
+    //document.getElementById('demo').innerHTML = "Ahmadreza Saeidi";
+    /*var Ps = document.getElementsByTagName('p');
+    for (n in Ps)
     {
-        var counter = 0;
-
-        function plus()
-        {
-            counter += 1;
-        }
-
-        plus();
-        return counter;
-    }
-
-    console.log(add());
+        console.log(Ps[n].innerHTML);
+    }*/
+    /*var element = document.getElementsByClassName("ahmadreza");
+    console.log(element[0].innerHTML);*/
+    /*var x = document.querySelectorAll("p.ahmadreza");
+    console.log(x[0].innerHTML);*/
 
 </script>
 </html>
